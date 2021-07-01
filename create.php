@@ -19,6 +19,8 @@ if ($hasSubmit) {
     ]);
 
     header('Location: /');
+    setFlash("Success to add a news", $class = "alert alert-success");
+
 }
 
 ?>

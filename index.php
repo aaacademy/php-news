@@ -1,3 +1,4 @@
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . "/helpers.php"; ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,6 +15,7 @@
     <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/navigation.php"; ?>
 
     <div class="container">
+        <?= getFlash();?>
         <?php
         $page = @$_GET['page'];
         switch ($page) {
@@ -32,6 +34,13 @@
         }
         ?>
     </div>
+
+    <script>
+      setTimeout(function() {
+        let alert = document.querySelector('.alert');
+        alert.remove();
+      }, 3000);
+    </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
